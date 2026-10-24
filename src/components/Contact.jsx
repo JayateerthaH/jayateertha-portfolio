@@ -14,7 +14,7 @@ export default function Contact() {
 
   return (
     <Section id="contact" method="POST" route="/contact" title="Get in touch">
-      <p className="lede">Open to {profile.openTo}. The fastest way to reach me is email.</p>
+      <p className="lede">I'm open to {profile.openTo}. Email is the fastest way to reach me. Happy to walk you through either project on a call.</p>
       <div className="contact">
         <div className="email-row">
           <a href={`mailto:${profile.email}`} className="email">{profile.email}</a>
@@ -26,7 +26,6 @@ export default function Contact() {
           <li><a href={profile.links.leetcode} target="_blank" rel="noreferrer">LeetCode</a></li>
         </ul>
       </div>
-      <footer className="footer">© {new Date().getFullYear()} {profile.name}</footer>
     </Section>
   );
 }

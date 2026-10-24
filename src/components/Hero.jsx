@@ -1,4 +1,4 @@
-import { profile } from "../data/profile.js";
+import { profile, quickFacts } from "../data/profile.js";
 
 export default function Hero() {
   return (
@@ -7,9 +7,11 @@ export default function Hero() {
         <div className="hero-text">
           <p className="eyebrow">{profile.role} · {profile.location}</p>
           <h1>{profile.name}</h1>
+          <p className="greeting">{profile.greeting}</p>
           <p className="headline">{profile.headline}</p>
           <div className="actions">
-            <a className="btn" href="#work">See my work</a>
+            <a className="btn" href="#work">See my projects</a>
+            <a className="btn ghost" href={`mailto:${profile.email}`}>Email me</a>
             {profile.resumeUrl && <a className="btn ghost" href={profile.resumeUrl} target="_blank" rel="noreferrer">Resume (PDF)</a>}
             <a className="btn ghost" href={profile.links.github} target="_blank" rel="noreferrer">GitHub</a>
           </div>
@@ -33,6 +35,13 @@ export default function Hero() {
   }
 }`}</pre>
         </aside>
+      </div>
+      <div className="wrap">
+        <dl className="facts" aria-label="Quick facts">
+          {quickFacts.map(([v, l]) => (
+            <div key={l}><dt>{l}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
       </div>
     </section>
   );

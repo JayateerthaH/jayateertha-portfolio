@@ -4,6 +4,7 @@
 export const profile = {
   name: "Jayateertha Handigol",
   role: "Backend Engineer · Java, Spring Boot, Microservices",
+  greeting: "Hi, I'm Jayateertha. I build the part of an app you don't see: the servers, databases and APIs that keep it working.",
   headline: "I design backend systems in Java and Spring Boot: microservices with Spring Cloud, data that stays consistent under concurrency, and services that fail safely.",
   location: "Hubballi, Karnataka, India",
   email: "govindkh888@gmail.com",
@@ -17,6 +18,22 @@ export const profile = {
   openTo: "SDE, Backend Developer and Software Engineer roles (graduating 2027)",
 };
 
+// Four numbers under the hero, for visitors who only skim.
+export const quickFacts = [
+  ["10", "microservices built with Spring Cloud"],
+  ["512 MB", "server running the live app"],
+  ["700+", "DSA problems solved"],
+  ["8.84", "CGPA · KLE Tech, class of 2027"],
+];
+
+// "Short on time?" guide in the About section: [time, what to read, link].
+export const tour = [
+  ["1 min", "The microservices design at a glance", "#work"],
+  ["2 min", "Try the live monolith app", "#campusevents"],
+  ["3 min", "Follow one request through both versions", "#trace"],
+  ["1 min", "Skills and what I'm learning", "#skills"],
+];
+
 export const about = [
   "I'm a Computer Science student at KLE Technological University (graduating 2027, CGPA 8.84). I work on the backend: service boundaries, authentication between services, data consistency, concurrency and running Java well on limited hardware.",
   "I built my event management platform twice. First as Spring Cloud microservices with an API gateway, service discovery, central configuration and a database per service. Then, when running 11 containers was too expensive to host, I consolidated it into a modular monolith that keeps the same boundaries and runs live on a 512 MB server. Building both taught me what each architecture costs.",
@@ -28,6 +45,7 @@ export const projects = [
     route: "/projects/event-platform-microservices",
     name: "Event Platform: Microservices",
     tagline: "10 Spring Boot services behind an API gateway, each with its own database, discovered through Eureka and configured from one config server.",
+    plain: "A campus event app split into 10 small programs. Each does one job (sign-in, events, attendance, email...) and keeps its own data, and one front door checks who you are before letting a request in.",
     status: "Runs locally with Docker Compose. Not deployed: the 11 containers are allocated about 5.9 GB of memory, which free hosting doesn't cover.",
     repo: "https://github.com/JayateerthaH/event-platform-microservices",
     live: null,
@@ -85,6 +103,7 @@ export const projects = [
     route: "/projects/campusevents",
     name: "CampusEvents: Modular Monolith",
     tagline: "The same platform consolidated into one deployable with 10 modules, live on a 512 MB server. Register, get a QR ticket, check in, earn a certificate.",
+    plain: "The same app rebuilt as one program so it fits on a free server. Students sign up for events, get a QR ticket, scan in at the door and download a certificate afterwards. You can try it live.",
     status: "Live. The backend runs on a free plan and may take about 30 seconds to wake up.",
     repo: "https://github.com/JayateerthaH/Event-Management-complete",
     live: "https://campusevents-jh.vercel.app",

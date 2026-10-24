@@ -23,17 +23,32 @@ npm run build      # production files in dist/
 
 Deployed on Vercel (project `jayateertha-portfolio`), connected to this GitHub repo. Push to `main` and Vercel builds (`npm run build`, output `dist`) and publishes automatically. Manual deploy if ever needed: `npx vercel --prod`.
 
+## Versions
+
+Each version is a git tag, and Vercel keeps every deployment.
+
+| Tag | Date | What changed |
+|---|---|---|
+| `portfolio_1` | 24 Oct 2026 | First deployed version: two case studies, architecture diagram, request walkthrough. |
+| `portfolio_2` | 24 Oct 2026 | Friendlier: menu on phones and tablets (navigation was hidden before), highlighted current section, greeting and four quick facts in the hero, "Short on time?" guide, "In plain words" summary for each project, first three decisions shown with "Show all", footer, back-to-top button, skip link. |
+
+To see an old version: `git checkout portfolio_1 && npm run dev`.
+
 ## Structure
 
 ```
 src/
   data/profile.js        all content: edit this
   components/            one component per section
-    Hero.jsx             name, headline and a JSON "response" card
+    Header.jsx           nav with current-section highlight, phone menu, theme toggle
+    Hero.jsx             name, greeting, JSON "response" card, quick facts
+    About.jsx            about text and the "Short on time?" guide
     Featured.jsx         one project case study (used for both projects)
     Architecture.jsx     microservices diagram (gateway, Eureka, config, 7 services)
     RequestTrace.jsx     one registration request, microservices vs monolith
     Skills.jsx           skills, "currently learning", problem solving
+    Footer.jsx           links and copyright
+    BackToTop.jsx        floating button after scrolling
   styles.css             design tokens (light and dark) and layout
 ```
 

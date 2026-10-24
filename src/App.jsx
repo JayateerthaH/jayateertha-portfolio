@@ -7,6 +7,8 @@ import OtherProjects from "./components/OtherProjects.jsx";
 import Skills from "./components/Skills.jsx";
 import Background from "./components/Background.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
+import BackToTop from "./components/BackToTop.jsx";
 import { projects } from "./data/profile.js";
 
 export default function App() {
@@ -24,6 +26,8 @@ export default function App() {
         <Background />
         <Contact />
       </main>
+      <Footer />
+      <BackToTop />
     </>
   );
 }
