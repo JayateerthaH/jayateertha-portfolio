@@ -1,5 +1,7 @@
 # Portfolio: Jayateertha Handigol
 
+**Live:** https://jayateertha-portfolio.vercel.app (Vercel, redeploys automatically on every push to `main`)
+
 A single-page portfolio built with React 19 and Vite 7. All text lives in `src/data/profile.js`; the components only lay it out.
 
 ## Run it
@@ -15,14 +17,11 @@ npm run build      # production files in dist/
 
 - `problemSolving.rating`: your exact LeetCode contest rating (the card is hidden until you set it).
 - `otherProjects[0].repo`: GitHub link for the Medical Record Management System.
-- `projects[0].repo`: GitHub link for the microservices project (push it to GitHub first; remove the `.env` file before pushing).
 - `profile.resumeUrl`: export your resume to PDF, save it as `public/Jayateertha_Handigol_Resume.pdf`, then set `resumeUrl: "/Jayateertha_Handigol_Resume.pdf"`. The button appears once this is set.
 
-## Deploy on Vercel (free)
+## Deployment
 
-1. Push this folder to a new GitHub repository (for example `portfolio`).
-2. On vercel.com: Add New → Project → import the repository. Vercel detects Vite automatically (build `npm run build`, output `dist`).
-3. Put the Vercel URL on your resume and LinkedIn.
+Deployed on Vercel (project `jayateertha-portfolio`), connected to this GitHub repo. Push to `main` and Vercel builds (`npm run build`, output `dist`) and publishes automatically. Manual deploy if ever needed: `npx vercel --prod`.
 
 ## Structure
 
